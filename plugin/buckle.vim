@@ -12,7 +12,8 @@ function! s:stop(...)
 	    call jobstop(s:buckle_job)
 	else
 	    call job_stop(s:buckle_job)
-	tendif
+	endif
+    catch /E116/
     catch /E121/
     catch /E900/
     endtry
